@@ -1,0 +1,57 @@
+{
+    "projects_filters": ["Modeling", "Textures", "VFX"],
+    "projects": [
+        {
+            "id": "exampleProject",
+            "title": "Example Project",
+            "description": "Enter a description for the project here",
+            "images_path": "/assets/portfolio/projects/projet-1/",
+            "tags": [
+                "Blender",
+                "Maya",
+                "3D",
+                "Texture"
+            ],
+            "url": ""
+        },
+        {
+            "id": "projet2",
+            "title": "Projet 2",
+            "description": "Un autre projet que j'ai réalisé au BASA",
+            "images_path": "/assets/portfolio/projects/projet-1/",
+            "tags": [
+                "Blender",
+                "Maya",
+                "3D",
+                "Texture"
+            ],
+            "url": ""
+        },
+        {
+            "id": "projet3",
+            "title": "Projet 3",
+            "description": "Une petite animation",
+            "images_path": "/assets/portfolio/projects/projet-1/",
+            "tags": [
+                "Blender",
+                "Maya",
+                "3D",
+                "Texture"
+            ],
+            "url": ""
+        },
+        {
+            "id": "projet4",
+            "title": "Projet 4",
+            "description": "Une caligraphie",
+            "images_path": "/assets/portfolio/projects/projet-1/",
+            "tags": [
+                "Blender",
+                "Maya",
+                "3D",
+                "Texture"
+            ],
+            "url": ""
+        }
+    ]
+}
