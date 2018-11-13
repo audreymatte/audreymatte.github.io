@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -8,7 +10,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* You can add global styles to this file, and also import other style files */
+::-moz-selection {
+  background: rgba(33, 68, 113, 0.4);
+}
+::selection {
+  background: rgba(33, 68, 113, 0.4);
+}
+
+.mfp-img {
+  max-height: 80vh !important;
 }
