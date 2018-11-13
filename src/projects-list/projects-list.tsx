@@ -44,12 +44,12 @@ export default class ProjectsList extends React.Component {
                   >
                     <div className="item">
                       <a
-                        href={"/projects/" + project.image}
+                        href={this.getImagePath(project.image)}
                         className="portfolio-popup"
                         title={project.title}
                         data-description={project.description}
                       >
-                        <img src={"/projects/" + project.image} />
+                        <img src={this.getImagePath(project.image)} />
                       </a>
                     </div>
                   </div>
@@ -112,5 +112,9 @@ export default class ProjectsList extends React.Component {
     }
 
     return tags;
+  }
+
+  private getImagePath(imageName: string) {
+    return process.env.PUBLIC_URL + "/projects/" + imageName;
   }
 }
