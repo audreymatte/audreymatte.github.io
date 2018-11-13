@@ -3,20 +3,6 @@ import { projects } from "./projects";
 import "./projects-list.css";
 
 export default class ProjectsList extends React.Component {
-  public getAllTags() {
-    const tags: string[] = [];
-
-    for (const project of projects) {
-      for (const tag of project.tags) {
-        if (!tags.includes(tag)) {
-          tags.push(tag);
-        }
-      }
-    }
-
-    return tags;
-  }
-
   public render() {
     return (
       <div id="portfolio" className="portfolio section-space-padding">
@@ -51,33 +37,24 @@ export default class ProjectsList extends React.Component {
                 return (
                   <div
                     key={i}
-                    className="col-md-4 col-sm-6 col-xs-12 mix modeling textures"
+                    className={
+                      "col-md-4 col-sm-6 col-xs-12 mix " +
+                      project.tags.join(" ")
+                    }
                   >
                     <div className="item">
                       <a
-                        href={"../images/projects/" + project.image}
+                        href={"/projects/" + project.image}
                         className="portfolio-popup"
                         title={project.title}
-                        // description={project.description}
+                        data-description={project.description}
                       >
-                        <img src={"../images/projects/" + project.image} />
+                        <img src={"/projects/" + project.image} />
                       </a>
                     </div>
                   </div>
                 );
               })}
-              {/* <div className="col-md-4 col-sm-6 col-xs-12 mix modeling textures">
-                <div className="item">
-                  <a
-                    href="assets/portfolio/images/WineAndCheese.png"
-                    className="portfolio-popup"
-                    title="Still life, Wine and Cheese"
-                    description="Here is my end-of-term project for my first session at the university. The goal of the project was to create a still life scene from reference images. For my scene, I decided to do still life with a theme of french snack and add a touch of picnic with a little square fabric. For my lights, I wanted to create the cozy atmosphere of chic restaurants.The modeling was done with Maya and ZBrush and the textures with Substance Painter and Arnold."
-                  >
-                    <img src="assets/portfolio/images/WineAndCheese.png" />
-                  </a>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
@@ -121,5 +98,19 @@ export default class ProjectsList extends React.Component {
         </div>
       </div>
     );
+  }
+
+  private getAllTags() {
+    const tags: string[] = [];
+
+    for (const project of projects) {
+      for (const tag of project.tags) {
+        if (!tags.includes(tag)) {
+          tags.push(tag);
+        }
+      }
+    }
+
+    return tags;
   }
 }
