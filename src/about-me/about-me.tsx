@@ -5,7 +5,7 @@ import "./about-me.css";
 export default class AboutMe extends React.Component {
   public render() {
     return (
-      <div className="about-section">
+      <div id="about" className="about-section">
         <div className="row">
           <div className="col-md-6 col-sm-12 col-xs-12">
             <img className="img-responsive" src={me} />

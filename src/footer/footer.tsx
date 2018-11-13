@@ -4,7 +4,7 @@ import "./footer.css";
 export default class Footer extends React.Component {
   public render() {
     return (
-      <div className="contact">
+      <div id="contact">
         <footer className="footer-section">
           <div className="container">
             <div className="row">
