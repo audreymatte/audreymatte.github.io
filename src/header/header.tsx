@@ -66,6 +66,11 @@ export default class Header extends React.Component {
                                                     </a>
                                                 </li>
                                                 <li>
+                                                    <a className="smoth-scroll" href="#softwares">
+                                                        Softwares
+                                                    </a>
+                                                </li>
+                                                <li>
                                                     <a className="smoth-scroll" href="#portfolio">
                                                         Portfolio
                                                     </a>

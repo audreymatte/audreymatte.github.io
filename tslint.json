@@ -1,4 +1,5 @@
 {
+    "extends": "tslint:recommended",
     "rules": {
         "arrow-parens": false,
         "class-name": true,

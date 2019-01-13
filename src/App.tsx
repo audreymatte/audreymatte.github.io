@@ -6,6 +6,7 @@ import Footer from "./footer/footer";
 import Header from "./header/header";
 import ProjectsList from "./projects-list/projects-list";
 import AppRoutes from "./app-routes";
+import Softwares from "./softwares/softwares";
 
 export default class App extends React.Component {
     render() {
@@ -14,6 +15,7 @@ export default class App extends React.Component {
                 <div className="App">
                     <Header />
                     <AboutMe />
+                    <Softwares />
                     <ProjectsList />
                     <Footer />
                 </div>
