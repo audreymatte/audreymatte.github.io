@@ -1,8 +1,30 @@
 import * as React from "react";
 import "./header.scss";
 
+declare var $: any;
+
 export default class Header extends React.Component {
-    public render() {
+    iAmA = [
+        "3D animation",
+        "VFX" + this.wait(2),
+        "Modelisation" + this.wait(2),
+        "Compositing"
+    ];
+
+    wait(seconds: number) {
+        return `^${seconds * 1000}`
+    }
+
+    componentDidMount() {
+        $(".typing").typed({
+            strings: this.iAmA,
+            /* You can change the home section typing text from here and do not use "&" use "and" */
+            typeSpeed: 50,
+            loop: true
+        });
+    }
+
+    render() {
         return (
             <div id="home" className="home-section">
                 <div className="header-top-area">
@@ -69,7 +91,7 @@ export default class Header extends React.Component {
                                 <div className="row">
                                     <div className="col-md-12 text-center">
                                         <div className="header-text">
-                                            <p>Hi! My name is Audrey Matte, and I am a</p>
+                                            <p>Hi! My name is Audrey Matte, and I am a student in</p>
                                             <h2>
                                                 <span className="typing" />
                                             </h2>

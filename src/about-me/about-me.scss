@@ -1,0 +1,29 @@
+
+#about {
+    min-height: 100vh;
+}
+
+.about-section {
+	overflow: hidden;
+	background-color: #F9F9F9;
+}
+
+.about-section img {
+    position: absolute;
+    @media only screen and (max-width: 991px) {
+        position: inherit;
+        max-height: 80vh;
+        object-fit: cover;
+    }
+}
+
+.about-me {}
+
+.about-me h2 {
+	padding: 0px 50px;
+}
+
+.about-me p {
+	padding: 50px;
+	font-size: 15px;
+}

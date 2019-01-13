@@ -8,7 +8,7 @@ import ProjectsList from "./projects-list/projects-list";
 import AppRoutes from "./app-routes";
 
 export default class App extends React.Component {
-    public render() {
+    render() {
         return (
             <AppRoutes>
                 <div className="App">

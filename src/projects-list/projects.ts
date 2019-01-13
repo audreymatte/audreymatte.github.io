@@ -1,5 +1,9 @@
 export const projects = [
   {
+    youtubeId: "QOFg0kYMhGs",
+    tags: ["surf", "wake", "video editing"],
+  },
+  {
     description:
       "Here is my end-of-term project for my first session at the university. The goal of the project was to create a still life scene from reference images. For my scene, I decided to do still life with a theme of french snack and add a touch of picnic with a little square fabric. For my lights, I wanted to create the cozy atmosphere of chic restaurants.The modeling was done with Maya and ZBrush and the textures with Substance Painter and Arnold.",
     image: "WineAndCheese.png",

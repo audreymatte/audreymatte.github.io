@@ -1,9 +1,28 @@
 import * as React from "react";
 import { projects } from "./projects";
+import YoutubeVideo from "./youtube-video/youtube-video"
 import "./projects-list.scss";
 
 export default class ProjectsList extends React.Component {
-    public render() {
+    getAllTags() {
+        const tags: string[] = [];
+
+        for (const project of projects) {
+            for (const tag of project.tags) {
+                if (!tags.includes(tag)) {
+                    tags.push(tag);
+                }
+            }
+        }
+
+        return tags;
+    }
+
+    getImagePath(imageName: string) {
+        return process.env.PUBLIC_URL + "/projects/" + imageName;
+    }
+
+    render() {
         return (
             <div id="portfolio" className="portfolio section-space-padding">
                 <div className="container">
@@ -33,26 +52,48 @@ export default class ProjectsList extends React.Component {
 
                     <div className="portfolio-inner">
                         <div className="row">
+                            {/* <Masonry
+                            className="row"
+                            elementType={"div"}
+                            disableImagesLoaded={false}
+                            updateOnEachImageLoad={true}
+                        > */}
                             {projects.map((project, i) => {
-                                return (
-                                    <div
-                                        key={i}
-                                        className={"col-md-4 col-sm-6 col-xs-12 mix " + project.tags.join(" ")}
-                                    >
-                                        <div className="item">
-                                            <a
-                                                href={this.getImagePath(project.image)}
-                                                className="portfolio-popup"
-                                                title={project.title}
-                                                data-description={project.description}
-                                            >
-                                                <img src={this.getImagePath(project.image)} />
-                                            </a>
+                                if (project.image) {
+                                    return (
+                                        <div
+                                            key={i}
+                                            className={"col-md-4 col-sm-6 col-xs-12 mix " + project.tags.join(" ")}
+                                        >
+                                            <div className="item">
+                                                <a
+                                                    href={this.getImagePath(project.image)}
+                                                    className="portfolio-popup"
+                                                    title={project.title}
+                                                    data-description={project.description}
+                                                >
+                                                    <img src={this.getImagePath(project.image)} />
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                );
+                                    );
+                                } else if (project.youtubeId) {
+
+                                    return (
+                                        <div
+                                            key={i}
+                                            className={"col-md-4 col-sm-6 col-xs-12 mix " + project.tags.join(" ")}
+                                        >
+                                            <div className="item">
+                                                <YoutubeVideo id="QOFg0kYMhGs"></YoutubeVideo>
+                                            </div>
+                                        </div>
+                                    );
+                                }
+                                return;
                             })}
                         </div>
+                        {/* </Masonry> */}
                     </div>
                 </div>
 
@@ -95,23 +136,5 @@ export default class ProjectsList extends React.Component {
                 </div>
             </div>
         );
-    }
-
-    private getAllTags() {
-        const tags: string[] = [];
-
-        for (const project of projects) {
-            for (const tag of project.tags) {
-                if (!tags.includes(tag)) {
-                    tags.push(tag);
-                }
-            }
-        }
-
-        return tags;
-    }
-
-    private getImagePath(imageName: string) {
-        return process.env.PUBLIC_URL + "/projects/" + imageName;
     }
 }

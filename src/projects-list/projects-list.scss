@@ -1,0 +1,12 @@
+.portfolio-inner {
+    
+    @media only screen and (min-width: 768px) {
+        .item a img, .youtube, .embedded-video {
+            height: 200px;
+            padding: 0;
+            object-fit: cover;
+        }
+    }
+
+    
+}

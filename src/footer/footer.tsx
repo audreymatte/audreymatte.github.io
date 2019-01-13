@@ -2,7 +2,7 @@ import * as React from "react";
 import "./footer.scss";
 
 export default class Footer extends React.Component {
-    public render() {
+    render() {
         return (
             <div id="contact">
                 <footer className="footer-section">

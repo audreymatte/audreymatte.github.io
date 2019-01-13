@@ -1,9 +1,9 @@
 import * as React from "react";
-import me from "../images/me.jpg";
+import me from "../images/AboutMe.jpg";
 import "./about-me.scss";
 
 export default class AboutMe extends React.Component {
-    public render() {
+    render() {
         return (
             <div id="about" className="about-section">
                 <div className="row">
