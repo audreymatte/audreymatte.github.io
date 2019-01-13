@@ -28,19 +28,19 @@
 
 */
 
-(function($) {
+(function ($) {
   "use strict";
 
-  jQuery(document).ready(function() {
+  jQuery(document).ready(function () {
     /* Preloader */
 
-    $(window).on("load", function() {
+    $(window).on("load", function () {
       $("body").addClass("loaded");
     });
 
     /* Smooth Scroll */
 
-    $("a.smoth-scroll").on("click", function(e) {
+    $("a.smoth-scroll").on("click", function (e) {
       var anchor = $(this);
       $("html, body")
         .stop()
@@ -55,7 +55,7 @@
 
     /* Scroll Naviagation Background Change with Sticky Navigation */
 
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
       if ($(window).scrollTop() > 100) {
         $(".header-top-area").addClass("navigation-background");
       } else {
@@ -65,7 +65,7 @@
 
     /* Mobile Navigation Hide or Collapse on Click */
 
-    $(document).on("click", ".navbar-collapse.in", function(e) {
+    $(document).on("click", ".navbar-collapse.in", function (e) {
       if (
         $(e.target).is("a") &&
         $(e.target).attr("class") != "dropdown-toggle"
@@ -80,7 +80,7 @@
 
     /* Scroll To Top */
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       if ($(this).scrollTop() >= 500) {
         $(".scroll-to-top").fadeIn();
       } else {
@@ -88,25 +88,9 @@
       }
     });
 
-    $(".scroll-to-top").click(function() {
+    $(".scroll-to-top").click(function () {
       $("html, body").animate({ scrollTop: 0 }, 800);
       return false;
-    });
-
-    /* Typed.js */
-
-    $(window).load(function() {
-      $(".typing").typed({
-        strings: [
-          "Photograph",
-          "Musician",
-          "Photo and video editor",
-          "3D artist^3000"
-        ],
-        /* You can change the home section typing text from here and do not use "&" use "and" */
-        typeSpeed: 50,
-        loop: true
-      });
     });
 
     /* Parallax Background */
@@ -142,7 +126,7 @@
           "</div>" +
           "</div>",
 
-        titleSrc: function(item) {
+        titleSrc: function (item) {
           return (
             item.el.attr("title") + "<br>" + item.el.attr("data-description")
           );
@@ -173,7 +157,7 @@
 
     /* Statistics Counter */
 
-    $(".statistics").appear(function() {
+    $(".statistics").appear(function () {
       var counter = $(this).find(".statistics-count");
       var toCount = counter.data("count");
 
