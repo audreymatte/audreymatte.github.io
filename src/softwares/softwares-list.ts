@@ -6,5 +6,9 @@ export const softwares = [
   {
     image: "Maya.jpg",
     title: "Autodesk Maya"
+  },
+  {
+    image: "SubstancePainter.png",
+    title: "Substance Painter"
   }
 ];
