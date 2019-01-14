@@ -12,7 +12,7 @@ export default class Softwares extends React.Component {
                         <div className="col-sm-12">
                             <div className="section-title">
                                 <h2>Softwares used</h2>
-                                <p>These are the softwares that I use often.</p>
+                                <p>These are the softwares that I often use.</p>
                                 {softwares.map(software => {
                                     return (
 

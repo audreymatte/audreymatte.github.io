@@ -1,7 +1,7 @@
 export const projects = [
   {
-    youtubeId: "QOFg0kYMhGs",
-    tags: ["surf", "wake", "video editing"],
+    youtubeId: "zWI4Gjh_mxQ",
+    tags: ["VFX"],
   },
   {
     description:
