@@ -1,36 +1,15 @@
 {
-    "extends": "tslint:recommended",
     "rules": {
         "arrow-parens": false,
         "class-name": true,
-        "comment-format": [
-            true,
-            "check-space"
-        ],
-        "quotemark": [
-            true,
-            "double"
-        ],
-        "variable-name": [
-            true,
-            "ban-keywords"
-        ],
-        "whitespace": [
-            true,
-            "check-branch",
-            "check-decl",
-            "check-operator",
-            "check-separator",
-            "check-type"
-        ],
+        "comment-format": [true, "check-space"],
+        "quotemark": [true, "double"],
+        "variable-name": [true, "ban-keywords"],
+        "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
         "curly": true,
         "eofline": true,
         "forin": true,
-        "indent": [
-            true,
-            "spaces",
-            4
-        ],
+        "indent": [true, "spaces", 4],
         "interface-over-type-literal": false,
         "label-position": true,
         "max-classes-per-file": true,
@@ -38,14 +17,7 @@
         "no-any": true,
         "no-arg": true,
         "no-bitwise": true,
-        "no-console": [
-            true,
-            "debug",
-            "info",
-            "time",
-            "timeEnd",
-            "trace"
-        ],
+        "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
         "no-construct": true,
         "no-debugger": true,
         "no-duplicate-variable": true,
@@ -64,23 +36,11 @@
         "object-literal-key-quotes": false,
         "object-literal-sort-keys": false,
         "ordered-imports": false,
-        "one-line": [
-            true,
-            "check-open-brace",
-            "check-catch",
-            "check-else",
-            "check-whitespace"
-        ],
+        "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
         "radix": true,
-        "semicolon": [
-            true,
-            "always"
-        ],
+        "semicolon": [true, "always"],
         "trailing-comma": false,
-        "triple-equals": [
-            true,
-            "allow-null-check"
-        ],
+        "triple-equals": [true, "allow-null-check"],
         "typedef-whitespace": [
             true,
             {

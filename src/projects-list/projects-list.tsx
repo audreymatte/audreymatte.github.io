@@ -1,6 +1,6 @@
 import * as React from "react";
 import { projects } from "./projects";
-import YoutubeVideo from "./youtube-video/youtube-video"
+import YoutubeVideo from "./youtube-video/youtube-video";
 import "./projects-list.scss";
 
 export default class ProjectsList extends React.Component {
@@ -78,14 +78,13 @@ export default class ProjectsList extends React.Component {
                                         </div>
                                     );
                                 } else if (project.youtubeId) {
-
                                     return (
                                         <div
                                             key={i}
                                             className={"col-md-4 col-sm-6 col-xs-12 mix " + project.tags.join(" ")}
                                         >
                                             <div className="item">
-                                                <YoutubeVideo id="QOFg0kYMhGs"></YoutubeVideo>
+                                                <YoutubeVideo id={project.youtubeId} />
                                             </div>
                                         </div>
                                     );
